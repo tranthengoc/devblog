@@ -67,7 +67,7 @@ Designer: tranthengoc
 
 /* Variable definitions start
    ==========================
-   <Variable name="keycolor" description="Main Color" type="color" default="#00C631" value="#00C631"/>
+   <Variable name="keycolor" description="Main Color" type="color" default="#04AA6D" value="#04AA6D"/>
 
    <Group description="Page Text" selector="body">
      <Variable name="page.text.font" description="Font" type="font"
@@ -78,8 +78,8 @@ Designer: tranthengoc
    <Group description="Background" selector=".body-fauxcolumns-outer">
      <Variable name="body.background.color" description="Body" type="color" default="#cacaca" value="#cacaca"/>
 	 <Variable name="posts.background.color" description="Warna Wrapper" type="color" default="#ffffff" value="#ffffff"/>
-     <Variable name="header.background.left" description="Warna Header left" type="color" default="#5b86e5" value="#00C631"/>
-	 <Variable name="header.background.right" description="Warna Header right" type="color" default="#00C631" value="#00C631"/>
+     <Variable name="header.background.left" description="Warna Header left" type="color" default="#5b86e5" value="#04AA6D"/>
+	 <Variable name="header.background.right" description="Warna Header right" type="color" default="#04AA6D" value="#04AA6D"/>
    </Group>
    
    <Variable name="body.background" description="Body Background" type="background"
@@ -87,8 +87,8 @@ Designer: tranthengoc
    <Variable name="body.background.override" description="Body Background Override" type="string" default="" value=""/>
    
    <Group description="Color Link" selector=".main-outer">
-     <Variable name="body.link.color" description="Link Color" type="color" default="#00C631" value="#00C631"/>
-     <Variable name="body.link.visited.color" description="Visited Color" type="color" default="#00C631" value="#00C631"/>
+     <Variable name="body.link.color" description="Link Color" type="color" default="#04AA6D" value="#04AA6D"/>
+     <Variable name="body.link.visited.color" description="Visited Color" type="color" default="#04AA6D" value="#04AA6D"/>
      <Variable name="body.link.hover.color" description="Hover Color" type="color" default="#595959" value="#595959"/>
    </Group>
 
@@ -121,7 +121,7 @@ Designer: tranthengoc
      <Variable name="post.title.font" description="Font" type="font"
          default="bold 20px Poppins, Arial, sans-serif" value="bold 20px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
 	 <Variable name="posts.title.color" description="Link Color" type="color" default="#595959" value="#595959"/>
-	 <Variable name="post.title.hover.color" description="Link Hover Color" type="color" default="#00C631" value="#00C631"/>
+	 <Variable name="post.title.hover.color" description="Link Hover Color" type="color" default="#04AA6D" value="#04AA6D"/>
    </Group>
 
    <Group description="Judul Widget" selector=".sidebar h2, .sidebar-sticky h2, .latest-post-title h2, .above-post-widget h2">
@@ -160,9 +160,9 @@ Designer: tranthengoc
      <Variable name="navpage.font" description="Font" type="font"
          default="normal 14px Helvetica, Arial, sans-serif" value="normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
 	 <Variable name="navpage.bg" description="Background Color" type="color" default="transparent"  value="transparent"/>
-     <Variable name="navpage.color" description="Color" type="color" default="#00C631"  value="#00C631"/>
+     <Variable name="navpage.color" description="Color" type="color" default="#04AA6D"  value="#04AA6D"/>
 	 <Variable name="navpage.bg.hover" description="Background Hover Color" type="color" default="transparent"  value="transparent"/>
-     <Variable name="navpage.hover.color" description="Hover Color" type="color" default="#00C631"  value="#00C631"/>
+     <Variable name="navpage.hover.color" description="Hover Color" type="color" default="#04AA6D"  value="#04AA6D"/>
    </Group>
    
    <Group description="Footer" selector="#footer-container">
@@ -173,7 +173,7 @@ Designer: tranthengoc
    </Group>
 
    <Group description="Back to Top" selector="#back-to-top"> 
-     <Variable name="backtp.background.color" description="Background" type="color" default="#00C631" value="#00C631"/>
+     <Variable name="backtp.background.color" description="Background" type="color" default="#04AA6D" value="#04AA6D"/>
 	 <Variable name="backtp.color" description="Color" type="color" default="#ffffff" value="#ffffff"/>
    </Group>
    
@@ -2318,7 +2318,7 @@ body#layout::before {
     z-index: 1;
     padding: 10px 20px;
     font-size: 18px;
-    color: #00C631;
+    color: #04AA6D;
     background: #fff;
     border-radius: 20px;
     border: 1px solid #d6d6d6;
@@ -2735,7 +2735,7 @@ head.appendChild(script);
         <b:widget-setting name='postsPerAd'>1</b:widget-setting>
         <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
         <b:widget-setting name='showDateHeader'>true</b:widget-setting>
-        <b:widget-setting name='style.textcolor'>#00c631</b:widget-setting>
+        <b:widget-setting name='style.textcolor'>#04aa6d</b:widget-setting>
         <b:widget-setting name='showCommentLink'>true</b:widget-setting>
         <b:widget-setting name='style.urlcolor'>#595959</b:widget-setting>
         <b:widget-setting name='showAuthor'>true</b:widget-setting>
