@@ -76,7 +76,7 @@ Designer: tranthengoc
    </Group>
 
    <Group description="Background" selector=".body-fauxcolumns-outer">
-     <Variable name="body.background.color" description="Body" type="color" default="#cacaca" value="#cacaca"/>
+     <Variable name="body.background.color" description="Body" type="color" default="#dddddd" value="#dddddd"/>
 	 <Variable name="posts.background.color" description="Warna Wrapper" type="color" default="#ffffff" value="#ffffff"/>
      <Variable name="header.background.left" description="Warna Header left" type="color" default="#5b86e5" value="#04AA6D"/>
 	 <Variable name="header.background.right" description="Warna Header right" type="color" default="#04AA6D" value="#04AA6D"/>
@@ -359,7 +359,6 @@ body {
 /* HEADER */
 #header-container {
 	background: $(header.background.left);
-	background: linear-gradient(to right, $(header.background.left), $(header.background.right));
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -367,6 +366,8 @@ body {
 	width: 100%;
 	z-index: 999;
 	height: 48px;
+	max-width: 1060px;
+    margin: 0 auto;
 }
 #header-wrapper {
 	max-width: 1000px;
@@ -1099,6 +1100,10 @@ h2.post-title a:hover, h1.post-title a:hover {
 	padding: 25px 0px;
 	font: $(navmenufooter.font);
 	color: $(navmenufooter.color);
+	width: 100%;
+    z-index: 999;
+    max-width: 1060px;
+    margin: 0 auto;
 }
 #footer-navmenu-container {
 	max-width: 1000px;
@@ -1507,6 +1512,10 @@ h2.post-title a:hover, h1.post-title a:hover {
 	color: $(footer.color);
 	font-size: 12px;
 	text-align: center;
+	width: 100%;
+    z-index: 999;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 #footer-wrapper {
 	max-width: 1000px;
@@ -4126,7 +4135,7 @@ var artikel=document.getElementById(&quot;body-post-it&quot;),paragraf=artikel.q
   <li><a href='#'>About</a></li>
   <li><a href='#'>Contact</a></li>
   <li><a href='#'>Privacy Policy</a></li>
-  <li><a href='https://nullphpscript.com/category/wordpress-themes/'>WordPress</a></li>
+  <li><a href='#'>Blogger</a></li>
 </ul>
 <!-- menu navigasi footer end -->
 
