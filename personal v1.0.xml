@@ -465,12 +465,20 @@ h2.post-title a:hover, h1.post-title a:hover {
 	display: block;
 }
 .label-info-th {
-    display: block;
     z-index: 2;
     position: relative;
-    margin-bottom: 10px;
-	height: 32px;
 	overflow: hidden;
+}
+.label-info-th a {
+    color: $(label.color);
+    display: inline-block;
+    padding: 0;
+	margin: 0;
+    font-size: 13px;
+	font-weight: 400;
+}
+.label-info-th a:hover {
+	color: $(label.hover.color);
 }
 .label-line, .label-line-c  {
 	position:relative;
@@ -478,29 +486,6 @@ h2.post-title a:hover, h1.post-title a:hover {
 .label-line-c {
 	text-align: center;
 	margin-bottom: 20px;
-}
-.label-line::before, .label-line-c::before {
-	background: $(label.bg.line.color);
-	z-index: 1;
-    content: "";
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
-.label-info-th a {
-    color: $(label.color);
-    background: $(label.bg.color);
-    display: inline-block;
-    padding: 5px 12px;
-	margin: 1px 0;
-    font-size: 13px;
-	font-weight: 500;
-	border: 1px solid #00c63133;
-}
-.label-info-th a:hover {
-	color: $(label.hover.color);
 }
 .post-info {
 	color: $(post.footer.color);
@@ -524,7 +509,7 @@ h2.post-title a:hover, h1.post-title a:hover {
 .post-info a:hover {
 	color: $(body.link.color);
 }
-.comment-info::before, .time-info::before, .label-info::before {
+.author-info::before, .comment-info::before, .time-info::before, .label-info::before {
 	content: "\2014";
 	padding: 0 2px;
 }
@@ -2478,6 +2463,12 @@ body#layout #footer-navmenu::after {
 
 ]]></b:template-skin>
 
+<b:if cond='data:view.isPost'> 
+	<style>
+		.author-info::before {display:none}
+  	</style>
+</b:if> 
+
 <script>
 var widgetBacaJuga = true;
 var relatedPosts = true;
@@ -3126,13 +3117,6 @@ head.appendChild(script);
 </b:includable>
       <b:includable id='labelsinfo' var='post'>
   <b:if cond='data:post.labels'>
-  <div class='label-line'>
-  <span class='label-info-th'>
-  <b:loop values='data:post.labels' var='label'>
-	<a expr:href='data:label.url + &quot;?&amp;max-results=8&quot;' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'/>
-  </b:loop>
-  </span>
-  </div>
   </b:if>
 </b:includable>
       <b:includable id='mobile-index-post' var='post'>
@@ -3498,6 +3482,7 @@ var relatedTitles=new Array,relatedTitlesNum=0,relatedUrls=new Array;function ba
 			</div>
 		</div>
 		<div class='post-info info-1'>
+             <span class='label-info-th'> <b:loop values='data:post.labels' var='label'> <a expr:href='data:label.url + &quot;?&amp;max-results=8&quot;' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'/> </b:loop> </span>
 			<b:include data='post' name='postauthorinfo'/>
 			<b:include data='post' name='postdateinfo'/>
 			<b:include data='post' name='postcommentinfo'/>
