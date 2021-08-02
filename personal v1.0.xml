@@ -253,7 +253,7 @@ textarea{display:block;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;
 /* code & blockquote */
 pre,code{font-family:monospace;color:inherit;font-size:.9rem}
 pre{white-space:pre;word-wrap:normal;overflow:auto;}
-blockquote{background:rgba(0,0,0,0.025);margin:1.5em 0;padding:1em 1em;font-style:italic;font-size:105%;}
+blockquote{background:#fff2b2;margin:1.5em 0;padding:1em 1em;font-style:italic;font-size:105%;}
 
 /* table */
 table[border="1"] td, table[border="1"] th {
@@ -2915,13 +2915,11 @@ head.appendChild(script);
     <b:if cond='data:mobile'>
       <h4 id='comment-post-message'>
         <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'><data:postCommentMsg/></a></h4>
-      <div class='message-comment'><data:blogCommentMessage/></div>
       <data:blogTeamBlogMessage/>
       <a aria-label='write comment' expr:href='data:post.commentFormIframeSrc + &quot;&amp;skin=contempo&quot; + data:variantParam' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' scrolling='no' src='' style='display: none' title='Comment Form' width='100%'/>
     <b:else/>
       <h4 id='comment-post-message'><data:postCommentMsg/></h4>
-      <div class='message-comment'><data:blogCommentMessage/></div>
       <data:blogTeamBlogMessage/>
       <a aria-label='write comment' expr:href='data:post.commentFormIframeSrc + &quot;&amp;skin=contempo&quot; + data:variantParam' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' scrolling='no' src='' title='Comment Form' width='100%'/>
@@ -3673,12 +3671,10 @@ var relatedPostConfig = {
       <b:includable id='threaded-comment-form' var='post'>
   <div class='comment-form'>
     <b:if cond='data:mobile'>
-      <div class='message-comment'><data:blogCommentMessage/></div>
       <data:blogTeamBlogMessage/>
       <a aria-label='write comment' expr:href='data:post.commentFormIframeSrc + &quot;&amp;skin=contempo&quot; + data:variantParam' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' scrolling='no' src='' style='display: none' title='Comment Form' width='100%'/>
     <b:else/>
-      <div class='message-comment'><data:blogCommentMessage/></div>
       <data:blogTeamBlogMessage/>
       <a aria-label='write comment' expr:href='data:post.commentFormIframeSrc + &quot;&amp;skin=contempo&quot; + data:variantParam' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' scrolling='no' src='' title='Comment Form' width='100%'/>
