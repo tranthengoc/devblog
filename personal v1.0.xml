@@ -67,19 +67,19 @@ Designer: tranthengoc
 
 /* Variable definitions start
    ==========================
-   <Variable name="keycolor" description="Main Color" type="color" default="#04AA6D" value="#04AA6D"/>
+   <Variable name="keycolor" description="Main Color" type="color" default="#0366d6" value="#0366d6"/>
 
    <Group description="Page Text" selector="body">
      <Variable name="page.text.font" description="Font" type="font"
-         default="normal normal 16px Helvetica, Arial, sans-serif" value="normal normal 16px Helvetica, Arial, sans-serif"/>
-     <Variable name="body.text.color" description="Main Text Color" type="color" default="#575757" value="#575757"/>
+         default="normal normal 16px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 16px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
+     <Variable name="body.text.color" description="Main Text Color" type="color" default="#1b1f23" value="#1b1f23"/>
    </Group>
 
    <Group description="Background" selector=".body-fauxcolumns-outer">
      <Variable name="body.background.color" description="Body" type="color" default="#dddddd" value="#dddddd"/>
 	 <Variable name="posts.background.color" description="Warna Wrapper" type="color" default="#ffffff" value="#ffffff"/>
-     <Variable name="header.background.left" description="Warna Header left" type="color" default="#5b86e5" value="#04AA6D"/>
-	 <Variable name="header.background.right" description="Warna Header right" type="color" default="#04AA6D" value="#04AA6D"/>
+     <Variable name="header.background.left" description="Warna Header left" type="color" default="#5b86e5" value="#0366d6"/>
+	 <Variable name="header.background.right" description="Warna Header right" type="color" default="#0366d6" value="#0366d6"/>
    </Group>
    
    <Variable name="body.background" description="Body Background" type="background"
@@ -87,27 +87,27 @@ Designer: tranthengoc
    <Variable name="body.background.override" description="Body Background Override" type="string" default="" value=""/>
    
    <Group description="Color Link" selector=".main-outer">
-     <Variable name="body.link.color" description="Link Color" type="color" default="#04AA6D" value="#04AA6D"/>
-     <Variable name="body.link.visited.color" description="Visited Color" type="color" default="#04AA6D" value="#04AA6D"/>
+     <Variable name="body.link.color" description="Link Color" type="color" default="#0366d6" value="#0366d6"/>
+     <Variable name="body.link.visited.color" description="Visited Color" type="color" default="#0366d6" value="#0366d6"/>
      <Variable name="body.link.hover.color" description="Hover Color" type="color" default="#595959" value="#595959"/>
    </Group>
 
    <Group description="Judul Blog" selector=".header">
      <Variable name="header.font" description="Font" type="font"
-         default="bold 25px Poppins, Arial, sans-serif" value="bold 25px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+         default="bold 25px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="bold 25px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
      <Variable name="header.title.color" description="Title Color" type="color" default="#ffffff"  value="#ffffff"/>
    </Group> 
    
    <Group description="Menu Navigasi" selector="#cssmenu">
      <Variable name="navmenu.font" description="Font" type="font"
-         default="bold 12px Helvetica, Arial, sans-serif" value="bold 12px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+         default="bold 12px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="bold 12px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
      <Variable name="navmenu.font.color" description="Color" type="color" default="#ffffff"  value="#ffffff"/>
      <Variable name="navmenu.font.hover.color" description="Hover Color" type="color" default="#ffffff"  value="#ffffff"/>
    </Group>
    
    <Group description="Submenu Navigasi" selector="#cssmenu">
      <Variable name="navsubmenu.font" description="Font" type="font"
-         default="400 12px Helvetica, Arial, sans-serif" value="400 12px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+         default="400 12px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="400 12px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
      <Variable name="navsubmenu.font.color" description="Color" type="color" default="#595959"  value="#595959"/>
      <Variable name="navsubmenu.font.background" description="Background Color" type="color" default="#f8f8f8"  value="#f8f8f8"/>
      <Variable name="navsubmenu.hover" description="Hover Color" type="color" default="#eaeaea"  value="#eaeaea"/>
@@ -119,15 +119,15 @@ Designer: tranthengoc
    
    <Group description="Judul Postingan" selector="h2.post-title">
      <Variable name="post.title.font" description="Font" type="font"
-         default="bold 20px Poppins, Arial, sans-serif" value="bold 20px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+         default="bold 20px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="bold 20px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
 	 <Variable name="posts.title.color" description="Link Color" type="color" default="#595959" value="#595959"/>
-	 <Variable name="post.title.hover.color" description="Link Hover Color" type="color" default="#04AA6D" value="#04AA6D"/>
+	 <Variable name="post.title.hover.color" description="Link Hover Color" type="color" default="#0366d6" value="#0366d6"/>
    </Group>
 
    <Group description="Judul Widget" selector=".sidebar h2, .sidebar-sticky h2, .latest-post-title h2, .above-post-widget h2">
      <Variable name="widget.title.font" description="Title Font" type="font"
-        default="bold 15px Poppins, Arial, sans-serif" value="bold 15px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-	 <Variable name="widget.title.color" description="Color" type="color" default="#6d6d6d" value="#6d6d6d"/>
+        default="bold 15px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="bold 15px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
+	 <Variable name="widget.title.color" description="Color" type="color" default="#1b1f23" value="#1b1f23"/>
    </Group>
 
    <Group description="Label" selector=".label-info-th">
@@ -139,8 +139,8 @@ Designer: tranthengoc
    
    <Group description="Post Footer" selector=".post-info">
      <Variable name="post.footer.font" description="Font" type="font"
-         default="normal normal 13px Helvetica, Arial, sans-serif" value="normal normal 13px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-     <Variable name="post.footer.color" description="Color" type="color" default="#707070" value="#707070"/>
+         default="normal normal 13px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 13px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
+     <Variable name="post.footer.color" description="Color" type="color" default="#1b1f23" value="#1b1f23"/>
    </Group>
    
    <Group description="Icon Media Sosial" selector="#footer-widget-container">
@@ -150,7 +150,7 @@ Designer: tranthengoc
 
    <Group description="Menu Footer" selector="#footer-navmenu">
      <Variable name="navmenufooter.font" description="Font" type="font"
-         default="bold 14px Helvetica, Arial, sans-serif" value="bold 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+         default="bold 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="bold 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
 	 <Variable name="navmenufooter.bg" description="Background Color" type="color" default="#292929"  value="#292929"/>
      <Variable name="navmenufooter.color" description="Color" type="color" default="#ffffff"  value="#ffffff"/>
      <Variable name="navmenufooter.hover.color" description="Hover Color" type="color" default="#ffffff"  value="#ffffff"/>
@@ -158,11 +158,11 @@ Designer: tranthengoc
    
    <Group description="Page navigation" selector="#blog-pager">
      <Variable name="navpage.font" description="Font" type="font"
-         default="normal 14px Helvetica, Arial, sans-serif" value="normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+         default="normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
 	 <Variable name="navpage.bg" description="Background Color" type="color" default="transparent"  value="transparent"/>
-     <Variable name="navpage.color" description="Color" type="color" default="#04AA6D"  value="#04AA6D"/>
+     <Variable name="navpage.color" description="Color" type="color" default="#0366d6"  value="#0366d6"/>
 	 <Variable name="navpage.bg.hover" description="Background Hover Color" type="color" default="transparent"  value="transparent"/>
-     <Variable name="navpage.hover.color" description="Hover Color" type="color" default="#04AA6D"  value="#04AA6D"/>
+     <Variable name="navpage.hover.color" description="Hover Color" type="color" default="#0366d6"  value="#0366d6"/>
    </Group>
    
    <Group description="Footer" selector="#footer-container">
@@ -173,16 +173,16 @@ Designer: tranthengoc
    </Group>
 
    <Group description="Back to Top" selector="#back-to-top"> 
-     <Variable name="backtp.background.color" description="Background" type="color" default="#04AA6D" value="#04AA6D"/>
+     <Variable name="backtp.background.color" description="Background" type="color" default="#0366d6" value="#0366d6"/>
 	 <Variable name="backtp.color" description="Color" type="color" default="#ffffff" value="#ffffff"/>
    </Group>
    
 	<Group description="No edit">
-	 <Variable name="body.text.font" description="Font" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-	 <Variable name="tabs.font" description="0" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-	 <Variable name="posts.icons.color" description="1" type="color" default="#707070" value="#707070"/>
+	 <Variable name="body.text.font" description="Font" type="font" default="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
+	 <Variable name="tabs.font" description="0" type="font" default="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
+	 <Variable name="posts.icons.color" description="1" type="color" default="#1b1f23" value="#1b1f23"/>
 	 <Variable name="labels.background.color" description="2" type="color" default="#ffffff" value="#ffffff"/>
-	 <Variable name="blog.title.font" description="3" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+	 <Variable name="blog.title.font" description="3" type="font" default="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
 	 <Variable name="blog.title.color" description="4" type="color" default="#fff" value="#ffffff"/>
 	 <Variable name="header.icons.color" description="5" type="color" default="#fff" value="#ffffff"/>
 	 <Variable name="tabs.color" description="14" type="color" default="#ccc" value="#cccccc"/>
@@ -190,8 +190,8 @@ Designer: tranthengoc
 	 <Variable name="tabs.overflow.background.color" description="16" type="color" default="$(posts.background.color)" value="#ffffff"/>
 	 <Variable name="tabs.overflow.color" description="7" type="color" default="#393939" value="#393939"/>
 	 <Variable name="tabs.overflow.selected.color" description="18" type="color" default="#393939" value="#393939"/>
-	 <Variable name="posts.title.font" description="8" type="font" default="normal normal 20px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 20px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
-	 <Variable name="posts.text.font" description="9" type="font" default="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji" value="normal normal 14px system-ui,-apple-system,Segoe UI,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"/>
+	 <Variable name="posts.title.font" description="8" type="font" default="normal normal 20px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 20px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
+	 <Variable name="posts.text.font" description="9" type="font" default="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" value="normal normal 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"/>
 	 <Variable name="posts.text.color" description="10" type="color" default="#444444" value="#444444"/>
 	</Group>
 	
@@ -241,7 +241,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* list */
-ol,ul,dl{margin: .8rem 0rem .8rem 3rem}
+ol,ul,dl{margin: .8rem 0rem .8rem 1rem}
 li{margin: .5rem 0}
 dt{font-weight: bold}
 dd{margin: 0 0 .5rem 2rem}
@@ -1759,7 +1759,7 @@ p.comment-footer {
 	margin: 0;
 }
 h4#comment-post-message {
-	display: none;
+	display: inline-block;
 	margin: 0 0 0 0;
 }
 .comments{
@@ -1793,19 +1793,25 @@ h4#comment-post-message {
     border-radius: 17px;
 }
 .comments .comment-block {
-	background: rgba(0, 0, 0, 0.03);
-	position: relative;
-	padding: 20px;
-	margin-left: 45px;
-	border-radius: 10px;
+	position: initial;
+	padding: 20px 15px 15px 35px;
+	margin-left: 15px;
 	word-break: break-word;
+    border: 1px solid #dddddd;
+    border-radius: 8px 8px 0 0;
+	border-bottom: 0;
 }
 .comments .comments-content .comment-replies{
-	margin:10px 0;
-	margin-left:45px
+	margin:0;
+	margin-left:15px;
+	background: #f8f8f8;
+	padding: 8px 35px;
+    border: 1px solid #dddddd;
+    border-radius: 0 0 8px 8px;
+	border-top:0;
 }
 .comments .comments-content .comment-thread:empty{
-	display:none
+	display:inline-block;
 }
 .comments .comment-replybox-single {
 	margin-left:45px;
@@ -1824,22 +1830,22 @@ h4#comment-post-message {
 	margin:0
 }
 .comments .comment-thread.inline-thread .comment, .comments .comment-thread.inline-thread .comment:last-child {
-	margin:0px 0px 5px 14%
+	margin:0px 0px 5px 14%;
 }
 .comment .comment-thread.inline-thread .comment:nth-child(6) {
-	margin:0px 0px 5px 12%;
+	margin:0;
 }
 .comment .comment-thread.inline-thread .comment:nth-child(5) {
-	margin:0px 0px 5px 10%;
+	margin:0;
 }
 .comment .comment-thread.inline-thread .comment:nth-child(4) {
-	margin:0px 0px 5px 8%;
+	margin:0;
 }
 .comment .comment-thread.inline-thread .comment:nth-child(3) {
-	margin:0px 0px 5px 4%;
+	margin:0;
 }
 .comment .comment-thread.inline-thread .comment:nth-child(2) {
-	margin:0px 0px 5px 2%;
+	margin:0;
 }
 .comment .comment-thread.inline-thread .comment:nth-child(1) {
 	margin:0px 0px 5px 0;
@@ -1922,7 +1928,7 @@ h4#comment-post-message {
     display: none
 }
 .comments .thread-toggle {
-    display: inline-block
+    display: inline-block;
 }
 .comments .thread-toggle .thread-arrow {
     display: inline-block;
@@ -2312,7 +2318,7 @@ body#layout::before {
     z-index: 1;
     padding: 10px 20px;
     font-size: 18px;
-    color: #04AA6D;
+    color: #0366d6;
     background: #fff;
     border-radius: 20px;
     border: 1px solid #d6d6d6;
@@ -2735,11 +2741,11 @@ head.appendChild(script);
         <b:widget-setting name='postsPerAd'>1</b:widget-setting>
         <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
         <b:widget-setting name='showDateHeader'>true</b:widget-setting>
-        <b:widget-setting name='style.textcolor'>#04aa6d</b:widget-setting>
+        <b:widget-setting name='style.textcolor'>#0366d6</b:widget-setting>
         <b:widget-setting name='showCommentLink'>true</b:widget-setting>
         <b:widget-setting name='style.urlcolor'>#595959</b:widget-setting>
         <b:widget-setting name='showAuthor'>true</b:widget-setting>
-        <b:widget-setting name='style.linkcolor'>#575757</b:widget-setting>
+        <b:widget-setting name='style.linkcolor'>#1b1f23</b:widget-setting>
         <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
         <b:widget-setting name='showLabels'>true</b:widget-setting>
         <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
