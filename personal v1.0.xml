@@ -132,7 +132,7 @@ Designer: tranthengoc
 
    <Group description="Label" selector=".label-info-th">
      <Variable name="label.bg.color" description="Background" type="color" default="#f5f5f5" value="#f5f5f5"/>
-	 <Variable name="label.color" description="Color" type="color" default="#000000" value="#000000"/>
+	 <Variable name="label.color" description="Color" type="color" default="#0366d6" value="#0366d6"/>
 	 <Variable name="label.hover.color" description="Hover Color" type="color" default="#00c631" value="#00c631"/>
 	 <Variable name="label.bg.line.color" description="Line Color" type="color" default="#f5f5f5" value="#f5f5f5"/>
    </Group>
@@ -350,7 +350,7 @@ body {
 /* WRAPPER */
 #wrapper {
 	background: $(posts.background.color);
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 70px 30px 30px;
 	overflow: hidden;
@@ -366,11 +366,11 @@ body {
 	width: 100%;
 	z-index: 999;
 	height: 48px;
-	max-width: 1060px;
+	max-width: 1260px;
     margin: 0 auto;
 }
 #header-wrapper {
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -416,7 +416,7 @@ body {
 	background: transparent;
 	float: left;
 	width: 70%;
-	max-width: 700px;
+	max-width: 850px;
 }
 .breadcrumbs {
 	font-size: 0.9rem !important;
@@ -513,6 +513,10 @@ h2.post-title a:hover, h1.post-title a:hover {
 	content: "\2014";
 	padding: 0 2px;
 }
+.comment-reply::before {
+	content: "\21C0";
+	padding: 0 2px;
+}
 .edit-post a {
 	color: $(body.link.color);
 }
@@ -527,8 +531,11 @@ h2.post-title a:hover, h1.post-title a:hover {
 /* AUTHOR POST PROFILE */
 .author-profile {
     overflow: hidden;
-    margin: 30px 0;
 	line-height: 1.5;
+	background: rgba(0, 0, 0, 0.03);
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 .author-profile img {
 	width: 75px;
@@ -558,7 +565,7 @@ h2.post-title a:hover, h1.post-title a:hover {
 	background:transparent;
 	float:right;
 	width:30%;
-	max-width:300px;
+	max-width:400px;
 	margin:0 auto;
 }
 .sidebar h2, .sidebar-sticky h2, .latest-post-title h2, .above-post-widget h2, .comments h3 {
@@ -677,6 +684,8 @@ h2.post-title a:hover, h1.post-title a:hover {
 	display: inline-block;
 	color: $(label.color);
 	padding: 8px 12px;
+	background: transparent;
+    border: 1px solid;
 }
 .label-count {
 	margin-left: -12px;
@@ -783,7 +792,7 @@ h2.post-title a:hover, h1.post-title a:hover {
 	text-align: center;
     padding: 30px;
 	margin: 0 auto;
-	max-width: 300px;
+	max-width: 100%;
 }
 .Profile .profile-img {
 	border-radius: 50%;
@@ -1087,7 +1096,7 @@ h2.post-title a:hover, h1.post-title a:hover {
 	color: $(navmenufooter.color);
 	width: 100%;
     z-index: 999;
-    max-width: 1060px;
+    max-width: 1260px;
     margin: 0 auto;
 }
 #footer-navmenu-container {
@@ -1499,7 +1508,7 @@ h2.post-title a:hover, h1.post-title a:hover {
 	text-align: center;
 	width: 100%;
     z-index: 999;
-    max-width: 1050px;
+    max-width: 1250px;
     margin: 0 auto;
 }
 #footer-wrapper {
@@ -1718,7 +1727,6 @@ h2.post-title a:hover, h1.post-title a:hover {
 
 
 /* COMMENT FORM */
-
 #comments-block {
 	margin: 15px 0;
 }
@@ -1779,13 +1787,13 @@ h4#comment-post-message {
 	list-style: none;
 }
 .comment .avatar-image-container {
-	background: rgba(0, 0, 0, 0.03);
+	background: #f9f9f900;
 	border-radius: 20px;
 	float: left;
-	max-height: 36px;
+	max-height: 35px;
 	overflow: hidden;
-	width: 36px;
-	height: 36px;
+	width: 35px;
+	height: 35px;
     background-repeat: no-repeat;
     background-position: 8px 7px;
 }
@@ -1805,8 +1813,8 @@ h4#comment-post-message {
 .comments .comments-content .comment-replies{
 	margin:0;
 	margin-left:15px;
-	background: #f9f9f9;
-	padding: 8px 35px;
+	background: #eee;
+	padding: 10px 35px;
     border: 1px solid #dddddd;
     border-radius: 0 0 8px 8px;
 	border-top:0;
@@ -1867,20 +1875,24 @@ h4#comment-post-message {
 }
 .comments .comments-content .icon.blog-author::after {
 	content:"author";
-	background: rgba(0, 0, 0, 0.36);
+	background: #0366d6;
 	color: #fff;
 	padding: 2px 6px;
-	border-radius: 0;
-	font-size: 11px;
+	border-radius: 3px;
+	font-size: 13px;
+}
+.thread-count {
+	font-size: 15px;
 }
 .comments .comments-content .comment-header {
-	font-size:14px;
+	font-size:16px;
 	margin: 0 0 15px;
 }
 .comments .comments-content .comment-content {
 	margin: 0 0 15px;
 	text-align: left;
 	line-height: 1.6;
+	font-size: 16px;
 }
 .comments .comments-content .datetime {
 	margin-left: 6px;
@@ -1894,7 +1906,7 @@ h4#comment-post-message {
 }
 .comments .comment .comment-actions a {
 	display: inline-block;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 15px;
 	margin: 4px 8px 0 0;
 }
@@ -1934,10 +1946,10 @@ h4#comment-post-message {
 }
 .comments .thread-toggle .thread-arrow {
     display: inline-block;
-    height: 12px;
+    height: 14px;
     overflow: visible;
     padding-right: 4px;
-    width: 12px
+    width: 14px
 }
 .comments .thread-expanded .thread-arrow {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /%3E%3C/svg%3E") no-repeat scroll 0 0 transparent
@@ -2288,8 +2300,7 @@ h4#comment-post-message {
     display: none;
 }
 .comment .avatar-image-container {
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAC4jAAAuIwF4pT92AAAC4UlEQVR42nWU30uTYRTHn/d1bjOn5Y0Gu4mBNhWZ4EVXbiMUMVMjL2L+iJSYCMJkF27TzanbdNvfEN10U3STFdV/0GUE3faLsJsovEkIhDqfsWc8vqOLw87O+X6/73nOOc+jdnd3VT6fP2fZbNZVrVbV+vr61f7+/mdKqb+Y+EfEyIFx8tBqODqYy+WsQqGgpqen411dXR+7u7s/DAwMPMHwiZEDA9YU47fh8KvFxsfH0y6X63RycjKZTqcv7ezsWBg+MXJgtKipca6y/f19tby8HLZt+08sFps6PDxUIqS0ID4xcmDAwjErbQgCLhaLqq+v7/ng4ODjUqmktre36ZNl9MkiRg6MYI/gwG0IUiaBvb09lclkLvh8vq9zc3N3hGTJl1t0Hqu3pYUcGLBw4Op8Q5nSk8nk5fb29u9LS0vXqULItnOSxMiBAQsHblOF/MpxPB0dHZ9nZ2fvylEsWY2mComRAyPYT3BMjaYeDg0NPQoEAm/wIUvcNjB2XVCBAdvUQwNcm/La2lqotbX1dGZm5n65XFa6P7rPxMgJ5jdYOHDPHdncQwBynHttbW0/wuFwaWNjI7C1teXB8CORSIkcGL0yTXuIowWpgl1jcbluHo/npKen5x2GT4wcGLBasHFTjPtbm57c1WBvb+9rafix7NmL0dHR0sTERALDJybrcgwGLBy4eg66Mvvg4EDNz8/f9nq9v4T0cnV1dQQQcarB8InF4/ERhMHCIa5XTElvapu/sLBwy7Kss7GxsTSTq0+P5baZLlb3LZ2Xo6fgwOU/S08f7EQiEZCv/YxGozmm6FwXp+n1AQsHrgzsCh9TlUpFhUKhh36//219arbzjTPNeWt4ceAODw8/4KRqZWXlmgzgm/TiZr1s2/nGmWKOt7MmKNwbbrf7hMqVTOuVPJzvNzc3L5q3xlmZ08zbkUqlfJ2dnV8WFxenFHvFU6TfOxP4PzHzw/q9DAaDT2VPz/4BM3gzfN9VWhwAAAAASUVORK5CYII=');
-}
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:20px;height:20px' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M22,2C22,2 14.36,1.63 8.34,9.88C3.72,16.21 2,22 2,22L3.94,21C5.38,18.5 6.13,17.47 7.54,16C10.07,16.74 12.71,16.65 15,14C13,13.44 11.4,13.57 9.04,13.81C11.69,12 13.5,11.6 16,12L17,10C15.2,9.66 14,9.63 12.22,10.04C14.19,8.65 15.56,7.87 18,8L19.21,6.07C17.65,5.96 16.71,6.13 14.92,6.57C16.53,5.11 18,4.45 20.14,4.32C20.14,4.32 21.19,2.43 22,2Z' /%3E%3C/svg%3E"); }
 ]]></b:skin>
 
 <b:template-skin>
@@ -2709,7 +2720,25 @@ head.appendChild(script);
   <!-- wrapper start -->
   <div id='wrapper'>
   
-  <b:section class='bellow-header-widget' id='bellow-header-widget' maxwidgets='1' showaddelement='yes'/>
+  <b:section class='bellow-header-widget' id='bellow-header-widget' maxwidgets='1' showaddelement='yes'>
+    <b:widget id='HTML1' locked='false' title='' type='HTML'>
+      <b:widget-settings>
+        <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+    </b:widget>
+  </b:section>
 
   <div class='clear'/>
   
@@ -2718,7 +2747,25 @@ head.appendChild(script);
   <div class='post-container'>
   <b:if cond='data:blog.homepageUrl == data:blog.url'> <!-- dfdfdef -->
   
-  <b:section class='above-post-widget' id='above-post-widget' maxwidgets='1' showaddelement='yes'/>
+  <b:section class='above-post-widget' id='above-post-widget' maxwidgets='1' showaddelement='yes'>
+    <b:widget id='HTML2' locked='false' title='' type='HTML'>
+      <b:widget-settings>
+        <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+    </b:widget>
+  </b:section>
   
   <div class='latest-post-title'>
 	<h2><b:switch var='data:blog.locale'><b:case value='id'/>Latest Posts<b:default/>Latest Posts</b:switch></h2>
@@ -3908,7 +3955,8 @@ var relatedPostConfig = {
   <b:section class='ads-atas' id='ads-atas' maxwidgets='1' showaddelement='yes'>
     <b:widget id='HTML996' locked='true' title='ads Top Article' type='HTML' version='1'>
       <b:widget-settings>
-        <b:widget-setting name='content'/>
+        <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -3926,7 +3974,8 @@ var relatedPostConfig = {
   <b:section class='ads-tengah1' id='ads-tengah1' maxwidgets='1' showaddelement='yes'>
       <b:widget id='HTML997' locked='true' title='ads Middle Article 1' type='HTML' version='1'>
         <b:widget-settings>
-          <b:widget-setting name='content'/>
+          <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -3944,7 +3993,8 @@ var relatedPostConfig = {
   <b:section class='ads-tengah2' id='ads-tengah2' maxwidgets='1' showaddelement='yes'>
     <b:widget id='HTML998' locked='true' title='ads Middle Article 2' type='HTML' version='1'>
       <b:widget-settings>
-        <b:widget-setting name='content'/>
+        <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -3962,7 +4012,8 @@ var relatedPostConfig = {
   <b:section class='ads-bawah' id='ads-bawah' maxwidgets='1' showaddelement='yes'>
     <b:widget id='HTML999' locked='true' title='ads Below Article' type='HTML' version='1'>
       <b:widget-settings>
-        <b:widget-setting name='content'/>
+        <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -4104,7 +4155,25 @@ var artikel=document.getElementById(&quot;body-post-it&quot;),paragraf=artikel.q
 </b:includable>
     </b:widget>
   </b:section>
-  <b:section class='sidebar-sticky' id='sidebar-sticky' preferred='yes'/>
+  <b:section class='sidebar-sticky' id='sidebar-sticky' preferred='yes'>
+    <b:widget id='HTML3' locked='false' title='' type='HTML'>
+      <b:widget-settings>
+        <b:widget-setting name='content'>&lt;div class=&quot;content-box-yellow&quot; style=&quot;background-color: #fff2b2; box-sizing: inherit; margin: 0px 0px 25px; overflow: hidden; padding: 20px;&quot;&gt;
+&lt;span&gt;Google Adsense&lt;/span&gt;&lt;/div&gt;</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+    </b:widget>
+  </b:section>
   </div>
   </aside>
   <!-- sidebar wrapper end -->
