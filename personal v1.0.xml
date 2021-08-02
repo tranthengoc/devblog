@@ -2872,7 +2872,7 @@ head.appendChild(script);
 			<span itemprop='name'><b:switch var='data:blog.locale'><b:case value='id'/>Home<b:default/>Home</b:switch></span></a>
 			</span>
 			<b:if cond='data:post.labels'>
-			<b:loop index='nomor' values='data:post.labels' var='label'> &amp;nbsp;&#8250;&amp;nbsp;
+			<b:loop index='nomor' values='data:post.labels' var='label'> &amp;nbsp;&#8260;&amp;nbsp;
 			  <span itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
 				<meta expr:content='data:nomor+2' itemprop='position'/>
 				<a expr:href='data:label.url + &quot;?&amp;max-results=8&quot;' expr:title='data:label.name' itemprop='item' rel='nofollow'>
@@ -2881,7 +2881,7 @@ head.appendChild(script);
 			  </span>
 			</b:loop>
 			<b:else/>
-			&amp;nbsp;&#8250;&amp;nbsp; <span itemprop='name'><data:blog.pageName/></span>
+			&amp;nbsp;&#8260;&amp;nbsp; <span itemprop='name'><data:blog.pageName/></span>
 			</b:if>
 		</div>
 	</b:loop>
@@ -2891,7 +2891,7 @@ head.appendChild(script);
 		<a expr:href='data:blog.homepageUrl' itemprop='item' title='Home'>
 		<meta content='1' itemprop='position'/>
 		<span itemprop='name'><b:switch var='data:blog.locale'><b:case value='id'/>Home<b:default/>Home</b:switch></span></a>
-		</span> &amp;nbsp;&#8250;&amp;nbsp; 
+		</span> &amp;nbsp;&#8260;&amp;nbsp; 
 		<span itemprop='itemListElement' itemscope='itemscope' itemtype='https://schema.org/ListItem'>
 		<meta expr:content='data:num+2' itemprop='position'/>
 		<a expr:href='data:blog.url' expr:title='data:post.url' itemprop='item'>
@@ -4172,8 +4172,8 @@ var perPage=8;
 var numPages=6;
 var firstText =&#39;<b:switch var='data:blog.locale'><b:case value='id'/>First<b:default/>First</b:switch>&#39;;
 var lastText =&#39;<b:switch var='data:blog.locale'><b:case value='id'/>Last<b:default/>Last</b:switch>&#39;;
-var prevText =&#39;&#8250; <b:switch var='data:blog.locale'><b:case value='id'/>Prev<b:default/>Prev</b:switch>&#39;;
-var nextText =&#39;<b:switch var='data:blog.locale'><b:case value='id'/>Next<b:default/>Next</b:switch> &#8250;&#39;;
+var prevText =&#39;&#8260; <b:switch var='data:blog.locale'><b:case value='id'/>Prev<b:default/>Prev</b:switch>&#39;;
+var nextText =&#39;<b:switch var='data:blog.locale'><b:case value='id'/>Next<b:default/>Next</b:switch> &#8260;&#39;;
 var urlactivepage=location.href;
 var home_page=&quot;/&quot;;
 </script>
