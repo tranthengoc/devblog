@@ -1775,8 +1775,6 @@ function rc(e) {
       </span>
 </span>
     <div class='title-secondary'> 
-<span expr:href='data:post.Url'><span id='postviews' style='font-size: 15px' title='lượt xem'/> lượt xem</span>
-<i class='fa fa-circle' style='font-size:5px;vertical-align:middle;color:#333333;padding-left:2px;padding-right:2px;'/> 
 <b:if cond='data:post.allowComments'>
 <a class='commentcount' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick' title='nhận xét'><data:post.numComments/> <data:commentLabel/></a>
     </b:if>
@@ -1839,7 +1837,6 @@ function rc(e) {
              <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.dateHeader/></abbr></a>
            </b:if>
         </b:if>
-		<span data-tooltip='Đã chia sẻ với: Mọi người'><i class='fa fa-globe' style='padding-left:5px;font-size:13px;'/></span>
        </div>
      </div>
 		<b:if cond='data:post.firstImageUrl'>
@@ -1873,7 +1870,6 @@ function rc(e) {
 <script type='text/javascript'>bintiz(&quot;summary<data:post.id/>&quot;,&quot;<data:post.title/>&quot;,&quot;<data:post.url/>&quot;,&quot;&quot;);</script>
 </div>
 <div class='meta-botom'>
-<a class='postviews flat-button ripple' expr:href='data:post.Url' expr:name='data:post.id'><i class='fa fa-eye' style='font-size: 21px;padding-right: 5px;'/> <span id='postviews' style='font-size: 15px' title='lượt xem'/></a>
 <b:if cond='data:post.allowComments'>
 <a class='comment-count flat-button ripple' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick' title='nhận xét'><svg class='svg-icon-20' height='100%' viewBox='1 0 22 22' width='100%'><path class='Ce1Y1c' d='M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2 h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z'/></svg> <data:post.numComments/></a>
 </b:if>
@@ -3147,14 +3143,6 @@ $(".sidebar > .widget > h2").wrap("<div class='side-header'><div class='sidehead
 var uri=location.href,getFacebookCount=function(){$.getJSON("//graph.facebook.com/"+uri,function(o){var e=o.share.share_count;console.log(o),e?$(".fbshare").append(e):$(".fbshare").append(0)})};getFacebookCount();
 
 function oe_loadscript(e){var t=document.createElement("script");t.setAttribute("type","text/javascript"),t.setAttribute("src",e),document.getElementsByTagName("head")[0].appendChild(t)}function oe_jumptohash(){window.scrollTo(0,$("#"+window.location.hash.replace(/^#/,"")).offset().top)}function oembed_callback(e){revurl=e.url.split("").reverse().join(""),html=oe_elems[e.callID].html(),ee=$(e.html),w=parseInt(ee.attr("width")),h=parseInt(ee.attr("height")),1==oetube&&(src=ee.attr("src"),src+=(-1==src.indexOf("?")?"?":"&")+"autoplay=1",ee.attr("src",src),ee.attr("style","vertical-align:top;"),htm=$("<div/>").append(ee).html(),htm=$("<div/>").text(htm).html().replace(/"/g,"&quot;"),e.html='<a href="'+e.url+'" class="youtube-tube-link" style="width: '+w+"px; height: "+h+"px; background: #000 url("+e.thumbnail_url+') center center no-repeat;" onclick="$(this).replaceWith(\''+htm+'\');return false;"><div style="width:'+(w-4)+"px;height:"+(h-4)+'px;" class="youtube-tube-link-div"></div><div class="youtube-tube-link-info"><b>'+e.title+(e.playlist?"</b> [playlist]":"</b>")+"<br /><small>by "+e.author_name+"</small></div></a>"),htmlx=html.replace(RegExp("\\["+oetagname+"="+e.url.replace("/","\\/").replace(".","\\.").replace("?","\\?")+"\\]")," "+e.url+" "),htmlx=htmlx.replace(RegExp("\\["+oetagname+"="+e.url.replace("/","\\/").replace(".","\\.").replace("?","\\?")+" \\]")," "+e.url+" "),htmlx=htmlx.replace(RegExp('"'+e.url.replace("/","\\/").replace(".","\\.").replace("?","\\?")+'"',"g"),'"'+revurl+'"'),htmlx=htmlx.replace(RegExp(e.url.replace("/","\\/").replace(".","\\.").replace("?","\\?")),'<div style="height:'+h+'px;" class="oembed youtube">'+e.html+"</div>"),htmlx=htmlx.replace(RegExp('"'+revurl.replace("/","\\/").replace(".","\\.").replace("?","\\?")+'"',"g"),'"'+e.url+'"'),html!=htmlx&&(oe_elems[e.callID].html(htmlx),0<window.location.hash.replace(/^#/,"").length&&(oe_tid&&window.clearTimeout(oe_tid),oe_tid=window.setTimeout("oe_jumptohash()",1e3)))}function oembed_yt(e,t,o){src="http://oembed-js.appspot.com/?url="+encodeURIComponent(e)+"&callback=oembed_callback&callID="+encodeURIComponent(o),t&&(src=src+"&maxwidth="+t+"&maxheight="+t),oe_loadscript(src)}var oetag=0,oetagname="video",oetube=-1,oe_tid,oe_elems={};$(document).ready(function(){det=$('<div class="youtube-tube-link-div" />'),$("body").append(det),"absolute"==det.css("position")?0!=oetube&&(oetube=1):oetube=0,det.remove(),window.setTimeout(function(){var e=0;$(".comment-content,.comment-body,.comment-body-author").each(function(){if(html=" "+$(this).html()+" ",(matches=oetag?html.match(RegExp("\\["+oetagname+"=(https?:\\/\\/[^\\s<\\/]*youtu\\.*be[^\\]]+)","g")):html.match(/([>\s^]|\[\w+=)(https?:\/\/[^\s<\/]*youtu\.*be[^\s<\]]+)/g))&&matches.length)for(var t=0;t<matches.length;t++)url=matches[t].match(/https?:\/\/[^\s<\/]*youtu\.*be[^\s<\]]+/),oe_elems[e]=$(this),oembed_yt(url,$(this).width(),e++)})},500)});var _0x273a="innerHTML,comments,getElementById,length,<img src=',replace,<img width='100%' src=',' class='image'/>,<marquee>,</marquee>,<font size=',</font>,<font color=','>,<center>,</center>,<marquee direction='right'>,<table frame='box'><tr><td>,</td></tr></table>,<table align='center' frame='vsides' width='70%'><tr align='center'><td>,<hr/>,<table align='center' border='1' width='75%'><tr><td align='center' bgcolor=',<span style='background-color:,</span>,<font color='yellow' size='15'>&#9733;</font>,<font color='yellow' size='15'>&#9734;</font>,<font color='yellow' size='15'> &#9786; </font>,<font color='yellow' size='15'> &#9785; </font>,<,>".split(",");jrcomments=document[_0x273a[2]](_0x273a[1])[_0x273a[0]],0<jrcomments[_0x273a[3]]&&(jrcomments=jrcomments[_0x273a[5]](/\[img\]/gi,_0x273a[4]),jrcomments=jrcomments[_0x273a[5]](/\[im\#\]/gi,_0x273a[6]),jrcomments=jrcomments[_0x273a[5]](/\[\/img\]/gi,_0x273a[7]),document[_0x273a[2]](_0x273a[1])[_0x273a[0]]=jrcomments);var _0x274a="innerHTML,comments,getElementById,length,<pre>,replace,<pre>,</pre>,<marquee>,</marquee>,<font size=',</font>,<font color=','>,<center>,</center>,<marquee direction='right'>,<table frame='box'><tr><td>,</td></tr></table>,<table align='center' frame='vsides' width='70%'><tr align='center'><td>,<hr/>,<table align='center' border='1' width='75%'><tr><td align='center' bgcolor=',<span style='background-color:,</span>,<font color='yellow' size='15'>&#9733;</font>,<font color='yellow' size='15'>&#9734;</font>,<font color='yellow' size='15'> &#9786; </font>,<font color='yellow' size='15'> &#9785; </font>,<,>".split(",");jrcomments=document[_0x274a[2]](_0x274a[1])[_0x274a[0]],0<jrcomments[_0x274a[3]]&&(jrcomments=jrcomments[_0x274a[5]](/\[pre\]/gi,_0x274a[4]),jrcomments=jrcomments[_0x274a[5]](/\[im\#\]/gi,_0x274a[6]),jrcomments=jrcomments[_0x274a[5]](/\[\/pre\]/gi,_0x274a[7]),document[_0x274a[2]](_0x274a[1])[_0x274a[0]]=jrcomments);
-//]]>
-</script>
-</b:if>
-<b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-<script type='text/javascript'>
-//<![CDATA[
-jQuery.getScript('//cdn.firebase.com/js/client/2.3.2/firebase.js').done(function() {
-$.each($("a[name]"),function(e,o){var t=$(o).parent().find("#postviews"),n=new Firebase("//tranthengoc-e1893.firebaseio.com/pages/id/"+$(o).attr("name"));n.once("value",function(e){var a=e.val(),s=!1;null==a&&(a={},a.value=0,a.url=window.location.href,a.id=$(o).attr("name"),s=!0),t.text(a.value),a.value++,"/"!=window.location.pathname&&(s?n.set(a):n.child("value").set(a.value))})});});
 //]]>
 </script>
 </b:if>
