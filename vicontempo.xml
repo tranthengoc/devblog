@@ -283,9 +283,15 @@
 
 /*!************************************************
  * Blogger Template Style
- * Name: Vi-Contempo (Mẫu Contempo Việt Nam)
+ * Name: ContempoVi
+ * Location: VietNam
  * Design: tranthengoc
  **************************************************/
+.published::before {
+    content: "\2014";
+    padding: 0 2px;
+}
+
 body {
   overflow-wrap: break-word;
   word-break: break-word;
@@ -693,7 +699,7 @@ iframe.b-hbp-video {
 	left: 0px;
     width: 35px;
     height: 35px;
-    background: url(http://1.bp.blogspot.com/_7wsQzULWIwo/SxL-DRXzmWI/AAAAAAAACY0/d1g3ymxGLEQ/s400/avatar.gif) center / 35px no-repeat;
+    background: url(https://1.bp.blogspot.com/-dKR0io3_lzo/YQ5e1SbWHmI/AAAAAAAABvw/rInzgIzn3mg5O04R72y0B5PYXJ5E9x6fgCLcBGAsYHQ/s0/unnamed.png) center / 35px no-repeat;
 	border-radius: 50%;
 }
 
@@ -2237,16 +2243,6 @@ display: none;
   line-height: 28px;
 }
 
-.widget .title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 5px;
-    background: #1a73e830;
-    bottom: 0;
-    z-index: 0;
-}
-
 .BlogArchive li {
   font-size: 16px;
 }
@@ -2265,7 +2261,7 @@ display: none;
 }
 
 #page_body .FeaturedPost {
-  background: #f3f8ff;
+  background: $(posts.background.color);
   min-height: 40px;
   padding: 15px 40px;
   width: auto;
@@ -2400,15 +2396,12 @@ display: none;
   max-width: 100%;
   text-align: center;
   width: 100%;
-  display: inline;
 }
 
 .FeaturedPost .snippet-thumbnail img {
-  max-width: 25%;
+  max-width: 100%;
   width: 100%;
   border-radius: 8px;
-  float: left;
-  margin-right: 1em;
 }
 
 .byline {
@@ -3231,6 +3224,28 @@ body#layout .notex:after{content: 'Số cho tóm tắt nội dung "0 - tuỳ thu
 body#layout #related-posts-widget .section > h4{margin-left:0!important}
 #layout #related-post-set-desktop {background:#5ebf79!important;border:none!important}
 #layout #related-post-set-mobile {background:#5ebf79!important;border:none!important}
+
+/* Lightbox image Bungfrangki*/
+.CSS_LIGHTBOX {z-index:99999999!important;}
+.CSS_LIGHTBOX_BG_MASK_TRANSPARENT {opacity:.95!important;}
+.CSS_LIGHTBOX_SCALED_IMAGE_IMG {width:auto!important;max-width:100%;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+.CSS_LIGHTBOX_BTN_CLOSE {background: url('https://4.bp.blogspot.com/-cmZSAe4hgWI/V0K-3C5xiHI/AAAAAAAAG90/2btatUgRsM4qf8HIc7QweuToTkRqRNeuACLcB/s1600/delete.png') no-repeat!important;width:32px!important;height:32px!important;top:30px!important;opacity:0.7;transition:all .3s;}
+.CSS_LIGHTBOX_BTN_CLOSE:hover{opacity:1;}
+.CSS_LIGHTBOX_BTN_CLOSE_POS {right:10px!important;}
+.CSS_LIGHTBOX_BG_MASK{background-color:rgba(0,0,0,0.8)!important}
+.CSS_LIGHTBOX_FILMSTRIP{background-color:rgba(0,0,0,0.5)!important}
+
+
+/* Breadcrumbs Bungfrangki */
+.breadcrumbs {font-size:90%;overflow:hidden;color:#1a73e8;text-overflow:ellipsis;overflow:hidden;display:block;position:relative;margin:0 auto 20px}
+.breadcrumbs .icons{position:absolute;top:0;left:0;width:16px;height:16px;vertical-align:center}
+.breadcrumbs .breadhomepost{position:relative;padding:0;overflow:hidden}
+.breadcrumbs li{list-style-type:none;display:inline-block;float:left}
+.breadcrumbs span a {color:#414141;padding:0 3px;}
+.breadcrumbs &gt;span:last-child {width:0;color:#999;font-weight:400;padding:0 0 0 3px}
+.breadcrumbs span a:hover {color:#333}
+.breadcrumbs a:hover {color:#333}
+
 ]]></b:skin>
 
     <b:template-skin>
@@ -3272,6 +3287,18 @@ body#layout #related-posts-widget .section > h4{margin-left:0!important}
     </b:if>
     <b:defaultmarkups>
       <b:defaultmarkup type='Common'>
+                <b:includable id='breadcrumb' var='post'>
+<b:loop values='data:posts' var='post'>
+<b:if cond='data:post.labels'>
+<div class='breadcrumbs'>
+<span itemscope='itemscope' itemtype='https://data-vocabulary.org/Breadcrumb'><a class='breadhomepost' expr:href='data:blog.homepageUrl' itemprop='url' title='Home'><span itemprop='title'> Home&amp;nbsp;</span></a></span>&amp;nbsp;&#8250;
+<b:loop values='data:post.labels' var='label'>
+<span itemscope='itemscope' itemtype='https://data-vocabulary.org/Breadcrumb'><a expr:href='data:label.url + &quot;?max-results=6&quot;' expr:title='data:label.name' itemprop='url'><span itemprop='title'><data:label.name/></span></a><b:if cond='data:label.isLast != &quot;true&quot;'> &#8250; </b:if></span>
+</b:loop><span><data:post.title/></span>
+</div>
+</b:if>
+</b:loop>
+</b:includable>
         <b:includable id='widgetNotAvailableInPreview'>
           <b:if cond='data:widget.type == &quot;AdSense&quot;'>
             <div class='vertical-ad-placeholder'>
@@ -3606,7 +3633,7 @@ body#layout #related-posts-widget .section > h4{margin-left:0!important}
 
                 <div class='blog-name container'>
                   <b:section class='container' id='header' name='Header' showaddelement='false'>
-                    <b:widget id='Header1' locked='true' title='Contempo (Tiêu đề)' type='Header' version='2' visible='true'>
+                    <b:widget id='Header1' locked='true' title='contempovi (Tiêu đề)' type='Header' version='2' visible='true'>
                       <b:widget-settings>
                         <b:widget-setting name='displayUrl'/>
                         <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -4066,17 +4093,17 @@ body#layout #related-posts-widget .section > h4{margin-left:0!important}
                       <b:widget-setting name='showDateHeader'>false</b:widget-setting>
                       <b:widget-setting name='style.textcolor'>#1a73e8</b:widget-setting>
                       <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-                      <b:widget-setting name='authorLabel'>Oleh</b:widget-setting>
+                      <b:widget-setting name='authorLabel'>Bởi</b:widget-setting>
                       <b:widget-setting name='showCommentLink'>true</b:widget-setting>
                       <b:widget-setting name='style.urlcolor'>#212121</b:widget-setting>
-                      <b:widget-setting name='showAuthor'>false</b:widget-setting>
+                      <b:widget-setting name='showAuthor'>true</b:widget-setting>
                       <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
                       <b:widget-setting name='style.linkcolor'>#414141</b:widget-setting>
                       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                       <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                       <b:widget-setting name='timestampLabel'/>
                       <b:widget-setting name='reactionsLabel'/>
-                      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                      <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
                       <b:widget-setting name='style.layout'>1x1</b:widget-setting>
                       <b:widget-setting name='showLabels'>true</b:widget-setting>
                       <b:widget-setting name='showLocation'>true</b:widget-setting>
@@ -4085,7 +4112,7 @@ body#layout #related-posts-widget .section > h4{margin-left:0!important}
                       <b:widget-setting name='postsPerAd'>1</b:widget-setting>
                       <b:widget-setting name='showBacklinks'>false</b:widget-setting>
                       <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-                      <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                      <b:widget-setting name='showInlineAds'>true</b:widget-setting>
                       <b:widget-setting name='showReactions'>false</b:widget-setting>
                     </b:widget-settings>
                     <b:includable id='main'>
@@ -4502,7 +4529,7 @@ var labelArray = [<b:if cond='data:post.labels'><b:loop values='data:post.labels
         </b:includable>
                     <b:includable id='postFooterAuthorProfile' var='post'>
   <b:if cond='data:post.author.aboutMe and data:view.isPost'>
-    <div class='author-profile'>
+    <div class='author-profile' style='display:inline-block;background:#f8f9fa;float:right;padding:8px 15px;border-radius:8px;border:1px solid #dadce0'>
       <b:if cond='data:post.author.authorPhoto.url'>
         <img class='author-image' expr:src='data:post.author.authorPhoto.url' width='50px'/>
         <div class='author-about'>
@@ -4597,6 +4624,9 @@ var labelArray = [<b:if cond='data:post.labels'><b:loop values='data:post.labels
 </b:includable>
                     <b:includable id='postTitle' var='post'>
   <a expr:name='data:post.id'/>
+                      <b:if cond='data:view.isSingleItem'>
+<b:include data='post' name='breadcrumb'/>
+</b:if>
   <b:if cond='data:post.title != &quot;&quot;'>
     <h3 class='post-title entry-title'>
       <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
@@ -5008,33 +5038,14 @@ var relatedPostConfig={homePage:&quot;<data:blog.homepageUrl/>&quot;,widgetTitle
  </b:section>
    <!-- Please do not remove this credit link or your website will be redirect to website author. Hargai karya orang lain, ingin mengambil salah satu kode di theme ini silahkan, tapi jangan mengclaim theme ini milik ente. :D -->
 <div class='vieleftcredit'>
-&#169; <span id='current-year'/> <a expr:href='data:blog.homepageUrl' itemprop='creator' itemscope='itemscope' itemtype='http://schema.org/Person'><span itemprop='name'><data:blog.title/></span></a> - Design by <credits id='creditid'>  
-            <a href='https://vi-contempo.blogspot.com' id='creditlink'>tranthengoc</a>
+&#169; <span id='current-year'/> <a expr:href='data:blog.homepageUrl' itemprop='creator' itemscope='itemscope' itemtype='http://schema.org/Person'><span itemprop='name'><data:blog.title/></span></a> - Thiết kế bởi <credits id='creditid'>  
+            <a href='https://contempovi.blogspot.com' id='creditlink'>tranthengoc</a>
 </credits>
 </div>
 </div>
-
 	<b:template-script async='true' name='indie' version='1.0.0'/>
-   
-    <!-- Lightbox with Fancybox3 -->
-<b:if cond='data:view.isSingleItem'>
-  <link href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css' rel='stylesheet'/>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'/>
-  <script src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js'/>
-  <script>//<![CDATA[
-    $('.post-body img').each(function() {
-      var img_link = $(this).attr('src')
-      $(this).wrap('<a href='+ img_link +' data-fancybox="gallery"></a>')
-    })
-    $('.tr-caption-container').each(function() {
-      var caption = $(this).find('.tr-caption').text()
-      $(this).find('a').attr('data-caption',caption)
-    })
-  //]]></script>
-</b:if>
-<!-- Lightbox with Fancybox3 -->
-    
-    <!-- Related Posts by https://www.bungfrangki.com/2018/07/cara-pasang-related-posts-responsive.html -->
+  
+    <!-- Related Posts by BungFrangKi - url:'https://www.bungfrangki.com/2018/07/cara-pasang-related-posts-responsive.html' -->
     <script type='text/javascript'>
 //<![CDATA[
 var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>Bài viết liên quan</h4>",widgetStyle:1,homePage:"http://www.dte.web.id",numPosts:7,summaryLength:125,titleLength:"auto",thumbnailSize:200,noImage:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWOor68HAAL+AX7vOF2TAAAAAElFTkSuQmCC",containerId:"related-post",newTabLink:false,moreText:"Baca Selengkapnya",callBack:function(){}};for(var f in relatedPostConfig){d[f]=(relatedPostConfig[f]=="undefined")?d[f]:relatedPostConfig[f]}var j=function(a){var b=m.createElement("script");b.type="text/javascript";b.src=a;k.appendChild(b)},o=function(b,a){return Math.floor(Math.random()*(a-b+1))+b},l=function(a){var p=a.length,c,b;if(p===0){return false}while(--p){c=Math.floor(Math.random()*(p+1));b=a[p];a[p]=a[c];a[c]=b}return a},e=(typeof labelArray=="object"&&labelArray.length>0)?"/-/"+l(labelArray)[0]:"",h=function(b){var c=b.feed.openSearch$totalResults.$t-d.numPosts,a=o(1,(c>0?c:1));j(d.homePage.replace(/\/$/,"")+"/feeds/posts/summary"+e+"?alt=json-in-script&orderby=updated&start-index="+a+"&max-results="+d.numPosts+"&callback=showRelatedPost")},g=function(z){var s=document.getElementById(d.containerId),x=l(z.feed.entry),A=d.widgetStyle,c=d.widgetTitle+'<ul class="related-post-style-'+A+'">',b=d.newTabLink?' target="_blank"':"",y='<span class="bg_overlay"></span>',v,t,w,r,u;if(!s){return}for(var q=0;q<d.numPosts;q++){if(q==x.length){break}t=x[q].title.$t;w=(d.titleLength!=="auto"&&d.titleLength<t.length)?t.substring(0,d.titleLength)+"&hellip;":t;r=("media$thumbnail"in x[q]&&d.thumbnailSize!==false)?x[q].media$thumbnail.url.replace(/.*?:\/\//g , "//").replace(/\/s[0-9]+(\-c)?/, "/s"+d.thumbnailSize):d.noImage;u=("summary"in x[q]&&d.summaryLength>0)?x[q].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,"").substring(0,d.summaryLength)+"&hellip;":"";for(var p=0,a=x[q].link.length;p<a;p++){v=(x[q].link[p].rel=="alternate")?x[q].link[p].href:"#"}if(A==2){c+='<li><div class="related-post-item-thumbnail"><img alt="" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></div><div class="related-post-item-text"><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+">"+w+'</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">'+u+'</span> <a href="'+v+'" class="related-post-item-more"'+b+">"+d.moreText+"</a></span></div>"+y+"</li>"}else{if(A==3||A==4){c+='<li class="related-post-item" tabindex="0"><a class="related-post-item-title-thumb" href="'+v+'"'+b+'><div class="related-post-item-thumbnail"><img alt="" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></a></div><div class="related-post-item-tooltip"><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+">"+w+"</a><span>"+u+"</span></div>"+y+"</li>"}else{if(A==5){c+='<li class="related-post-item" tabindex="0"><a class="related-post-item-wrapper" href="'+v+'" title="'+t+'"'+b+'><div class="related-post-item-thumbnail"><img alt="" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"><span class="related-post-item-tooltip">'+w+"</span></a>"+y+"</li>"}else{if(A==6){c+='<li><div class="related-post-item-tooltip"><div class="related-post-item-thumbnail"><img alt="" src="'+r+'" width="'+d.thumbnailSize+'" height="'+d.thumbnailSize+'"></div><a class="related-post-item-title" title="'+t+'" href="'+v+'"'+b+">"+w+'</a><span class="related-post-item-summary"><span class="related-post-item-summary-text">'+u+"</span></span>"+y+"</div></li>"}else{c+='<li><a title="'+t+'" href="'+v+'"'+b+">"+w+"</a></li>"}}}}}s.innerHTML=c+="</ul>"+y;d.callBack()};randomRelatedIndex=h;showRelatedPost=g;j(d.homePage.replace(/\/$/,"")+"/feeds/posts/summary"+e+"?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")})(window,document,document.getElementsByTagName("head")[0]);
