@@ -6,7 +6,7 @@ $(document).on('click','.loadmore-btn', function(e){
       $.ajax({
          url: nextLink,
          beforeSend: function(){
-           loadmoreBtn.addClass('loading').text('Loading...');
+           loadmoreBtn.addClass('loading').text('Đang tải...');
          },
          complete: function(){
            loadmoreBtn.removeClass('loading');
@@ -17,9 +17,9 @@ $(document).on('click','.loadmore-btn', function(e){
            $('.blog-posts').append(rslt);
            loadmoreBtn.show();
            if(nextPage){
-             loadmoreBtn.attr('href', nextPage).text('Load More');
+             loadmoreBtn.attr('href', nextPage).text('Tải thêm bài viết');
            }else{
-             loadmoreBtn.addClass('no-more').text('All Posts Loaded!').removeAttr('href');
+             loadmoreBtn.addClass('no-more').text('Các bài viết đã được tải!').removeAttr('href');
            }
          }
       });
