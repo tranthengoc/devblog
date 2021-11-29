@@ -1,1 +1,1 @@
-# JS and CSS DevBlog Template Blogger
+# DevBlog Template Blogger
