@@ -1,5 +1,7 @@
 # DevBlog Template Blogger
-<a href="https://themes.3rdwavemedia.com/bootstrap-templates/popular/devblog-free-bootstrap-4-blog-template-for-developers/" target="_blank"><img src="https://themes.3rdwavemedia.com/wp-content/uploads/2019/02/Bootstrap-Blog-Template-DevBlog-Pormo.png" alt="Bootstrap 5 Blog Template for Developers" /></a>
+## PageSpeed Template Blogger
+<a href="https://github.com/tranthengoc/devblog/blob/main/image/desktop.jpg?raw=true" target="_blank"><img src="https://github.com/tranthengoc/devblog/blob/main/image/desktop.jpg?raw=true" /></a>
+<a href="https://github.com/tranthengoc/devblog/blob/main/image/mobile.jpg?raw=true" target="_blank"><img src="https://github.com/tranthengoc/devblog/blob/main/image/mobile.jpg?raw=true" /></a>
 
 ## Theme Details & Demo
 
